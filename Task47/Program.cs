@@ -10,31 +10,31 @@ m = 3, n = 4.
 8 7,8 -7,1 9
 */
 
-double [,] IniMatrix(int m, int n)
+double[,] IniMatrix(int m, int n)
 {
-    double [,] matrix = new double [m,n];
+    double[,] matrix = new double[m, n];
     Random randomizer = new Random();
 
     for (int i = 0; i < m; i++)
     {
-        for (int j = 0; j<n; j++)
+        for (int j = 0; j < n; j++)
         {
-           matrix[i,j] = Convert.ToDouble(randomizer.Next(-100, 100)/10.0);
+            matrix[i, j] = Convert.ToDouble(randomizer.Next(-100, 100) / 10.0);
         }
     }
     return matrix;
 }
 
-void PrintMatrix(double [,] matrix)
+void PrintMatrix(double[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j<matrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write($"{matrix[i,j]} ");
+            Console.Write($"{matrix[i, j]} ");
         }
         Console.WriteLine();
-    }    
+    }
 }
 
 Console.WriteLine("Введите число m:");
